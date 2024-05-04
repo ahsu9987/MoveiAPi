@@ -4,6 +4,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+
 function Movie() {
   const [mymovie, setMymovie] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,7 +35,7 @@ function Movie() {
 
   return (
     <>
-      <InputGroup className="mt-2 text-center w-50 mb-2 searchbar">
+     <InputGroup className="mt-2 text-center w-50 mb-2 searchbar">
         <Form.Control
           placeholder="Search by Title.."
           aria-label="Username"
@@ -43,10 +44,10 @@ function Movie() {
         />
       </InputGroup>
 
-      <Container>
-        <Row className="movierow">
+ <Container   >
+        <Row className="movierow" >
           {filtered.map((item) => (
-            <Col lg={3} md={6} sm={4} className="mb-3 mt-3">
+            <Col lg={3} md={6} sm={4} className=" mt-3 mb-3 p-4"   >
               <Card
                 style={{
                   width: "18rem",
@@ -82,9 +83,17 @@ function Movie() {
             </Col>
           ))}
         </Row>
-      </Container>
+      </Container> 
+       
+
+    
+
     </>
+     
+
+
   );
 }
+
 
 export default Movie;
